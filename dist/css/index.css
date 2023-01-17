@@ -148,6 +148,33 @@
   cursor: pointer;
 }
 
+.contact {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.contact p {
+  padding: 10px;
+  background-color: red;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 1000;
+  color: white;
+  font-size: 1.1rem;
+  -webkit-animation: pulsate 1s ease-out;
+          animation: pulsate 1s ease-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  transform-origin: center;
+  transition: 0.2s;
+}
+
+.contact p:hover {
+  color: red;
+  cursor: pointer;
+  background-color: transparent;
+}
+
 /*========================================================*/
 /*media-query*/
 @media (max-width: 480px) {
@@ -167,3 +194,27 @@
   }
 }
 /*====================================*/
+/*key frames*/
+@-webkit-keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*======================================================================*/
