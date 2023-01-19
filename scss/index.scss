@@ -164,7 +164,7 @@
     background-color: transparent;
 }
 .side-btn{
-    visibility: hidden;
+    display: none;
 }
 /*========================================================*/
 
@@ -217,7 +217,7 @@
         display: none;
     }
     .side-btn{
-        visibility: visible;
+        display: block;
         margin: 30px;
         position: relative;
     }
@@ -282,7 +282,8 @@
     }
     .media2{
         color: black;
-        margin: 20px;
+        margin-left: 35%;
+        margin-top: 80%;
         align-self: center;
     }
     .media2 i{
