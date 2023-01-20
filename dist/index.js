@@ -6,7 +6,10 @@ const toggle = document.getElementById('toggle');
 const down = document.querySelector('.down-menu');
 console.log(down);
 let state = 'not-toggeled'
+let state2 = 'not-toggeled'
 let body = document.querySelector("body");
+const contactBtn = document.getElementById('contact-p');
+const contactForum = document.querySelector('.contact-forum');
 ///////////////////////////////////
 
 
@@ -24,6 +27,21 @@ if (state==='not-toggeled') {
     down.classList.remove('show')
     down.classList.remove('fade-in')
     state = 'not-toggeled'
+}
+})
+
+
+
+
+contactBtn.addEventListener('click',function () {
+if (state2==='not-toggeled') {
+    contactForum.classList.add('show')
+    contactForum.classList.add('fade-in')
+    state2 = 'toggeled'
+}else{
+    contactForum.classList.remove('show')
+    contactForum.classList.remove('fade-in')
+    state2 = 'not-toggeled'
 }
 })
 ////////////////////////////////////
