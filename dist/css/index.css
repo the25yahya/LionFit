@@ -4,6 +4,16 @@
   padding: 0%;
   box-sizing: border-box;
 }
+* a {
+  text-decoration: none;
+}
+* .nav-content a {
+  color: white;
+  transition: 0.2s;
+}
+* .nav-content a:hover {
+  color: red;
+}
 
 .icon {
   height: 30px;
