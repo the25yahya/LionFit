@@ -1,4 +1,5 @@
 //variables
+const removeBtn = document.querySelector('.remove')
 const contact = document.getElementsByClassName('contact');
 console.log(contact);
 const social = document.querySelectorAll('.fa-brands');
@@ -22,6 +23,7 @@ const startedBtn = document.querySelector('.started-btn');
 const pricingCard = document.querySelector('.pricing-card');
 let state3 = 'not-toggeled'
 console.log(startedBtn);
+const annualFeat = document.getElementById('annual-feature');
 ///////////////////////////////////
 
 
@@ -69,10 +71,14 @@ startedBtn.addEventListener('click',function(){
         pricingCard.classList.add('show')
         pricingCard.classList.add('fade-in')
         state3 = 'toggeled'
-    }else{
+    }
+})
+removeBtn.addEventListener('click',function(){
+    if (state3==='toggeled') {
         pricingCard.classList.remove('show')
         pricingCard.classList.remove('fade-in')
-        state3 = 'not-toggeled'}
+        state3 = 'not-toggeled'
+    }
 })
 ///////////////////////////////////////////
 annual.addEventListener('click',function(){
@@ -81,8 +87,14 @@ annual.addEventListener('click',function(){
     planType.innerText='-deluxe plan'
     planDescription.innerText='-perfect for begginers and veterans'
     price.innerText='$200/yr'
-    const newFeature = document.createElement('p');
-    newFeature.innerHTML='<i class="fa-solid fa-check"></i>'
-    newFeature.innerText='get costumised diets and workout routines'
-    features.appendChild(newFeature)
+    annualFeat.classList.remove('hide')
+})
+monthly.addEventListener('click',function(){
+    annual.classList.remove('chosen');
+    monthly.classList.add('chosen');
+    planType.innerText='-basic plan'
+    planDescription.innerText='perfect for begginers'
+    price.innerText='$19/mo'
+    annualFeat.classList.add('hide');
+
 })
