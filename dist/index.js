@@ -24,6 +24,8 @@ const pricingCard = document.querySelector('.pricing-card');
 let state3 = 'not-toggeled'
 console.log(startedBtn);
 const annualFeat = document.getElementById('annual-feature');
+const about = document.getElementById('about');
+console.log(about);
 ///////////////////////////////////
 
 
@@ -43,6 +45,7 @@ if (state==='not-toggeled') {
     state = 'not-toggeled'
 }
 })
+//////////////////////////////////////////////////////
 
 
 
@@ -93,7 +96,7 @@ monthly.addEventListener('click',function(){
     annual.classList.remove('chosen');
     monthly.classList.add('chosen');
     planType.innerText='-basic plan'
-    planDescription.innerText='perfect for begginers'
+    planDescription.innerText='-perfect for begginers'
     price.innerText='$19/mo'
     annualFeat.classList.add('hide');
 
